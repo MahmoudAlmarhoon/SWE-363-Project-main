@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Profile</title>
+  <link rel="stylesheet" href="./Profile.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+ <!-- Header Section -->
+ <header class="max-w-[1440px] flex justify-between items-center mx-auto py-5 border-gray-200 border-b">
+   <nav class="w-[80%] md:w-[20%] flex justify-center md:items-center">
+     <a href="/MainSell.html">
+       <span class="text-xl text-lime-700 mr-10 font-bold">KFUPM Exchange Hub</span>
+     </a>
+   </nav>
+   <div class="md:w-[80%] hidden md:flex justify-between items-center">
+     <ul class="flex gap-2">
+       <li>
+         <a href="MainSell.html" class="px-7 py-1 transition-color hover:text-white hover:bg-gray-700 bg-gray-400 text-white rounded-xl">Sells</a>
+       </li>
+       <li>
+         <a href="MainFree.html" class="px-7 py-1 transition-color hover:text-white hover:bg-gray-700 bg-gray-400 text-white rounded-xl">Free</a>
+       </li>
+       <li>
+         <a href="MainMazad.html" class="px-7 py-1 transition-color hover:text-white hover:bg-gray-700 bg-gray-400 text-white rounded-xl">Mazad</a>
+       </li>
+     </ul>
+     <div class="flex items-center justify-right gap-3">
+       <a href="/AddItem.html" class="flex items-center text-white bg-gray-700 px-7 py-1 rounded-full text-sm transition-color hover:text-black hover:bg-gray-400 bg-gray-700"><ion-icon name="add-outline"></ion-icon>Add Item</a>
+       <a href="login.html" class="flex items-center text-white bg-lime-700 px-7 py-1 rounded-full text-sm transition-color hover:bg-lime-800 bg-lime-700 text-white">Login</a>
+       <a href="/Profile.html" class="flex items-center text-gray-700 text-xl transition-color hover:text-lime-700"><ion-icon name="person-outline"></ion-icon></a>
+       <a href="cart.html" class="flex items-center text-gray-700 text-xl transition-color hover:text-lime-700"><ion-icon name="cart-outline"></ion-icon></a>
+     </div>
+   </div>
+   <ion-icon name="menu-outline" class="w-[20%] block md:hidden"></ion-icon>
+</header>
+<!-- End Header Section-->
+
+<div class="bg-white overflow-hidden shadow rounded-lg border">
+  <form action="/Profile" method="POST">
+      <div class="px-4 py-5 sm:px-6">
+          <h3 class="text-lg leading-6 font-medium text-gray-900">
+              User Profile
+          </h3>
+          <p class="mt-1 max-w-2xl text-sm text-gray-500">
+              Editable fields for user information. Click save to submit changes.
+          </p>
+      </div>
+      <div class="border-t border-gray-200 px-4 py-5 sm:p=0">
+          <dl class="sm:divide-y sm:divide-gray-200">
+              <div class="py-3 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                  <dt class="text-sm font-medium text-gray-500">
+                      Full name:
+                  </dt>
+                  <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+                      <input type="text" id="fullname" name="fullName" value="{{ fullName }}" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md">
+                  </dd>
+              </div>
+              <div class="py-3 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                  <dt class="text-sm font-medium text-gray-500">
+                      Email address
+                  </dt>
+                  <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+                      <input type="email" id="email" name="email" value="{{ email }}" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md">
+                  </dd>
+              </div>
+              <div class="py-3 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                  <dt class="text-sm font-medium text-gray-500">
+                      Phone number
+                  </dt>
+                  <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+                      <input type="tel" id="phone" name="phone" value="{{ phone }}" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md">
+                  </dd>
+              </div>
+              <div class="py-3 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                  <dt class="text-sm font-medium text-gray-500">
+                      Address
+                  </dt>
+                  <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+                      <textarea name="address" id="address" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md" rows="2">{{ address }}</textarea>
+                  </dd>
+              </div>
+          </dl>
+      </div>
+  </form>
+</div>
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+</body>
+</html>
