@@ -38,9 +38,11 @@
         const inputPrice = parseInt(document.getElementById('inputText').value);
         const lastPrice = parseInt(document.getElementById('lastPrice').innerText.replace(/\D/g,''));
         if (inputPrice > lastPrice) {
+            const price = inputPrice.toString()
             const bidderName = prompt('Please enter your name:');
             if (bidderName) {
-                document.getElementById('lastBider').innerText = `<b>Last Bider is: </b>${bidderName}`;
+                document.getElementById('lastPrice').innerHTML = `<p id="lastPrice"><b>Last Price is: </b>${price}SR</p>`;
+                document.getElementById('lastBider').innerHTML = `<p id="lastBider"><b>Last Bider is: </b>${bidderName}</p>`;
             }
         } else {
             alert('Your bid should be higher than the last price.');
